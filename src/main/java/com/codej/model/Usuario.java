@@ -17,9 +17,12 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre;
+    private String apellidos;
     private String email;
     private String password;
+    private String telefono;
     private Boolean enabled=true;
+    private String foto;
 
     @JsonIgnoreProperties(value = {"usuarios", "hibernateLazyInitializer", "handler"})
     @ManyToMany(fetch = FetchType.EAGER)
